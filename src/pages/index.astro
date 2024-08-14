@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {KobalteTest} from "../components/Dialog";
+import {Hover} from "../components/Hover";
+import {Counter} from "../components/Simple";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <!-- Breaks on build -->
+    <Hover client:load />
+    <!-- Breaks on build too -->
+    <KobalteTest client:load />
+    <!-- Sanity component to check solidjs is working -->
+    <Counter client:load />
+  </main>
+</Layout>
